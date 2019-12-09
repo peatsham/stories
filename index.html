@@ -6,6 +6,21 @@
   peatsham
  </title>
 <style>
+ #myDIV {
+ / border: 1px solid black;/
+  width: 600px;
+  color: red;
+  -webkit-animation: mymove 5s infinite; 
+  animation: mymove 5s infinite;
+}
+
+@-webkit-keyframes mymove {
+  50% {color: green;}
+}
+
+@keyframes mymove {
+  50% {color: green;}
+}
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -23,7 +38,11 @@
 </head>
 <body>
 
-<h1 style="color:green;text-align:center;font-family:verdana;">PETE EASTHAM'S SHORT STORIES</h1>
+<div id="myDIV"><h1 style="text-align:center;font-family:verdana;">PETE EASTHAM'S SHORT STORIES</h1>
+  
+ 
+</div>
+
 
 <!--<p style="text-align:center;font-family:courier;">A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>-->
 
