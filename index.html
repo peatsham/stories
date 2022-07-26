@@ -1,6 +1,13 @@
- <!DOCTYPE html>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/favicon_io/site.webmanifest">
 <head>
  <title>
   peatsham
@@ -20,12 +27,11 @@
 @keyframes mymove {
   50% {color: green;}
 }
+
 .grid-container {
   display: grid;
   background-color: white;
-  padding: px;
-  justify-content: center;
-  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -33,127 +39,16 @@
   padding: 5px;
   font-size: 30px;
   text-align: center;
-}
- .item1 {
-  grid-column: 1 / span 1;
-  grid-row: 1;
-}
-
-.item2 {
-  grid-column: 2 / span 1;
-  grid-row: 1;
-}
-
-.item3 {
-  grid-column: 3 / span 1;
-  grid-row: 1;
-}
- 
- .item4 {
-  grid-column: 1 / span 3;
-  grid-row: 2; 
-  /*display:flex; 
-  justify-content:center;
-  align-items:center;
-  object-fit: cover;
-  width: 1024px;
-  height: 192px;*/
-   
- }
- 
- .item5 {
-  grid-column: 1 / span 1;
-  grid-row: 3;
-}
- 
- .item6 {
-  grid-column: 2 / span 1;
-  grid-row: 3;
-}
- 
- .item7 {
-  grid-column: 3 / span 1;
-  grid-row: 3;
-}
-  .item8 {
-  grid-column: 1 / span 3;
-  grid-row: 4;
-}
-  .item9 {
-  grid-column: 1 / span 1;
-  grid-row: 5;
-}
-  .item10 {
-  grid-column: 2 / span 1;
-  grid-row: 5;
-}
-  .item11 {
-  grid-column: 3 / span 1;
-  grid-row: 5;
-}
-  
-  .item12 {
-   grid-column: 1 / span 3;
-   grid-row: 6;
-   /*display:flex; 
-  justify-content:center;
-  align-items:center;
-  object-fit: cover;
   width: 100%;
-  height: 100%;*/
-  }
-   
-  
- 
- .item13 {
-  grid-column: 1 / span 1;
-  grid-row: 7;
- }
- 
- .item14 {
-  grid-column: 2 / span 1;
-  grid-row: 7;
- }
-
- .item15 {
-  grid-column: 3 / span 1;
-  grid-row: 7;
- }
- 
- .item16 { 
-  grid-column: 1 / span 3;
-  grid-row: 8;
- 
- }
- 
-  .item17 {
-   grid-column: 1 / span 1;
-   grid-row: 9;
- } 
- .item18 { 
-  grid-column: 2 / span 1;
-  grid-row: 9;
- }
- .item19 { 
-  grid-column: 3 / span 1;
-  grid-row: 9;
- }
- .item20 { 
-  grid-column: 1 / span 3;
-  grid-row: 10;
- }
- .item21 { 
-  grid-column: 1 / span 1;
-  grid-row: 11;
- }
- .item22 { 
-  grid-column: 2 / span 1;
-  grid-row: 11;
- }
- .item23 { 
-  grid-column: 3 / span 1;
-  grid-row: 11;
- }
+}
+.grid-item:nth-child(4n){
+  grid-column: 1 / -1;
+}
+img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
 </style>
 </head>
 <body>
@@ -169,39 +64,39 @@
 <!--<p>Direct child element(s) of the grid container automatically becomes grid items#2196F3.</p>-->
 
 <div class="grid-container">
-  <div class="grid-item item1"><a href="thegutter.html"><img src="the gutter.jpg" alt="the gutter" style="width:100%"></a></div>
-  <div class="grid-item item2"><a href="False Witness.html"><img src="falsewitness.jpg" alt="false witness" style="width:100%"></a></div>
-  <div class="grid-item item3"><a href="aplacetoescape.html"><img src="aplacetoescape.jpg" alt="a place to escape" style="width:100%"></a></div>
-  <div class="grid-item item4"><a href="Copy of paris bound.html"><img src="parisboundtext.jpg" alt="parisbound" style="object-fit: cover"></a></div>
-  <div class="grid-item item5"><a href="sunlightmeadows.html"><img src="sunlightmeadows2.png" alt="sunlight meadows" style="width:100%"></a></div>
-  <div class="grid-item item6"><a href="thewalk.html"><img src="thewalk.jpg" alt="the walk" style="width:100%"></a></div>
-  <div class="grid-item item7"><a href="thevisitor.html"><img src="thevisitor.jpg" alt="the visitor" style="width:100%"></a></div>
+  <div class="grid-item item1"><a href="thegutter.html"><img loading="lazy" src="the gutter.jpg" alt="the gutter" ></a></div>
+  <div class="grid-item item2"><a href="False Witness.html"><img loading="lazy" src="falsewitness.jpg" alt="false witness" ></a></div>
+  <div class="grid-item item3"><a href="aplacetoescape.html"><img loading="lazy" src="aplacetoescape.jpg" alt="a place to escape" ></a></div>
+  <div class="grid-item item4"><a href="Copy of paris bound.html"><img loading="lazy" src="parisboundtext.jpg" alt="parisbound"></a></div>
+  <div class="grid-item item5"><a href="sunlightmeadows.html"><img loading="lazy" src="sunlightmeadows2.png" alt="sunlight meadows" ></a></div>
+  <div class="grid-item item6"><a href="thewalk.html"><img loading="lazy" src="thewalk.jpg" alt="the walk" ></a></div>
+  <div class="grid-item item7"><a href="thevisitor.html"><img loading="lazy" src="thevisitor.jpg" alt="the visitor" ></a></div>
  
- <div class="grid-item item8"><a href="the mugging.html"><img src="themuggingtext.png" alt="themugging" style="object-fit: cover"></a></div>
- <div class="grid-item item9"><a href="thewalk.html"><img src="thewalk.jpg" alt="the walk" style="width:100%"></a></div>
- <div class="grid-item item10"><a href="Perspectives.html"><img src="perspectivestext.png" alt="perspectives" style="width:100%"></a></div>
+ <div class="grid-item item8"><a href="the mugging.html"><img loading="lazy" src="themuggingtext.png" alt="themugging"></a></div>
+ <div class="grid-item item9"><a href="thewalk.html"><img loading="lazy" src="thewalk.jpg" alt="the walk" ></a></div>
+ <div class="grid-item item10"><a href="Perspectives.html"><img loading="lazy" src="perspectivestext.png" alt="perspectives" ></a></div>
  
- <div class="grid-item item11"><a href="The find.html"><img src="thefindtext.png" alt="thefind" style="width:100%"></a></div>
+ <div class="grid-item item11"><a href="The find.html"><img loading="lazy" src="thefindtext.png" alt="thefind" ></a></div>
  
  
  
- <div class="grid-item item12"><a href="a long ride.html"><img src="the long ride.jpg" alt="thelongride" style="width:100%" style="object-fit: cover"></a></div>
- <div class="grid-item item13"><a href="Justa and Rufina.html"><img src="justa and rufina txt.png" alt="justa and rufina" style="width:100%"></a></div>
- <div class="grid-item item14"><a href="thedrum.html"><img src="thedrumtxt.jpg" alt="thedrum" style="width:100%"></a></div>
+ <div class="grid-item item12"><a href="a long ride.html"><img loading="lazy" src="the long ride.jpg" alt="thelongride" /></a></div>
+ <div class="grid-item item13"><a href="Justa and Rufina.html"><img loading="lazy" src="justa and rufina txt.png" alt="justa and rufina" ></a></div>
+ <div class="grid-item item14"><a href="thedrum.html"><img loading="lazy" src="thedrumtxt.jpg" alt="thedrum" ></a></div>
  
- <div class="grid-item item15"><a href="GreenGoddessSauce.html"><img src="greengoddesstxt.png" alt="greengoddesssauce" style="width:100%"></a></div>
- <div class="grid-item item16"><a href="thedeparture.html"><img src="thedeparturetext.jpg" alt="departure" style="object-fit: cover"></a></div>
-  <div class="grid-item item17"><a href="analternativeending.html"><img src="analtend.jpg" alt="an alternative ending" style="width:100%"></a></div>
-  <div class="grid-item item18"><a href="newbeginnings.html"><img src="newbeginnings.jpg" alt="new beginnings" style="width:100%"></a></div>
-  <div class="grid-item item19"><a href="ambition.html"><img src="ambition.jpg" alt="ambition" style="width:100%"></a></div>
- <div class="grid-item item20"><a href="andalousse.html"><img src="andalousse2.png" alt="andalousse" style="object-fit: cover"></a></div>
- <div class="grid-item item21"><a href="THE BARTON BROOK.html"><img src="thebartonbrook2.jpg" alt="bartonbrook" style="width:100%"></a></div>
- <div class="grid-item item22"><a href="Isaac.html"><img src="isaac2.jpg" alt="isaac" style="width:100%"></a></div>
- <div class="grid-item item23"><a href="THE THREE LITTLE PIGS.html"><img src="thethreelittlepigs3.jpg" alt="threelittlepigs" style="width:100%"></a></div>
+ <div class="grid-item item15"><a href="GreenGoddessSauce.html"><img loading="lazy" src="greengoddesstxt.png" alt="greengoddesssauce" ></a></div>
+ <div class="grid-item item16"><a href="thedeparture.html"><img loading="lazy" src="thedeparturetext.jpg" alt="departure"></a></div>
+  <div class="grid-item item17"><a href="analternativeending.html"><img loading="lazy" src="analtend.jpg" alt="an alternative ending" ></a></div>
+  <div class="grid-item item18"><a href="newbeginnings.html"><img loading="lazy" src="newbeginnings.jpg" alt="new beginnings" ></a></div>
+  <div class="grid-item item19"><a href="ambition.html"><img loading="lazy" src="ambition.jpg" alt="ambition" ></a></div>
+ <div class="grid-item item20"><a href="andalousse.html"><img loading="lazy" src="andalousse2.png" alt="andalousse"></a></div>
+ <div class="grid-item item21"><a href="THE BARTON BROOK.html"><img loading="lazy" src="thebartonbrook2.jpg" alt="bartonbrook" ></a></div>
+ <div class="grid-item item22"><a href="Isaac.html"><img loading="lazy" src="isaac2.jpg" alt="isaac" ></a></div>
+ <div class="grid-item item23"><a href="THE THREE LITTLE PIGS.html"><img loading="lazy" src="thethreelittlepigs3.jpg" alt="threelittlepigs" ></a></div>
  
-  <!--<div class="grid-item"><img src="water.jpg" style="width:75%"></div>
-  <div class="grid-item"><img src="water.jpg" style="width:75%"></div>
-  <div class="grid-item"><img src="water.jpg" style="width:75%"></div>-->
+  <!--<div class="grid-item"><img loading="lazy" src="water.jpg" style="width:75%"></div>
+  <div class="grid-item"><img loading="lazy" src="water.jpg" style="width:75%"></div>
+  <div class="grid-item"><img loading="lazy" src="water.jpg" style="width:75%"></div>-->
 </div>
 
 </body>
